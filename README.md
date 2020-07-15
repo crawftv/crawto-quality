@@ -11,55 +11,57 @@ Because documentation is a oft boring or an after-thought.
 Many programs exist to turn documentation into websites or otherwise shareable
 text.  The CrawtoDoc package exists to turn code into documentation.  
 ### From  
+```python
+class DummyClassifier(MultiOutputMixin, ClassifierMixin, BaseEstimator):
+    @_deprecate_positional_args
+    def __init__(self, *, strategy="warn", random_state=None, constant=None):  
+        self.strategy = strategy
+        self.random_state = random_state
+        self.constant = constant
+```
+### To 
+```python
+class DummyClassifier(MultiOutputMixin, ClassifierMixin, BaseEstimator):  
+    """<#TODO Description>
 
-    class DummyClassifier(MultiOutputMixin, ClassifierMixin, BaseEstimator):
-        @_deprecate_positional_args
-        def __init__(self, *, strategy="warn", random_state=None, constant=None):  
-            self.strategy = strategy
-            self.random_state = random_state
-            self.constant = constant
+    Parameters
+    ----------
+    strategy : <#TODO type definition>, default=warn
+        <#TODO Description>
 
-### To  
-    class DummyClassifier(MultiOutputMixin, ClassifierMixin, BaseEstimator):  
-        """<#TODO Description>
+    random_state : <#TODO type definition>, default=None
+        <#TODO Description>
 
-        Parameters
-        ----------
-        strategy : <#TODO type definition>, default=warn
-            <#TODO Description>
+    constant : <#TODO type definition>, default=None
+        <#TODO Description>
 
-        random_state : <#TODO type definition>, default=None
-            <#TODO Description>
+    Attributes
+    ----------
+    sparse_output_ : <#TODO type definition>
+        <#TODO Attribute Description>
 
-        constant : <#TODO type definition>, default=None
-            <#TODO Description>
+    n_outputs_ : <#TODO type definition>
+        <#TODO Attribute Description>
 
-        Attributes
-        ----------
-        sparse_output_ : <#TODO type definition>
-            <#TODO Attribute Description>
+    n_features_in_ : <#TODO type definition>
+        <#TODO Attribute Description>
 
-        n_outputs_ : <#TODO type definition>
-            <#TODO Attribute Description>
+    outputs_2d_ : <#TODO type definition>
+        <#TODO Attribute Description>
 
-        n_features_in_ : <#TODO type definition>
-            <#TODO Attribute Description>
-
-        outputs_2d_ : <#TODO type definition>
-            <#TODO Attribute Description>
-
-        Examples
-        --------
-        >>> from crawto-quality import crawto_doc
-        >>> example = DummyClassifier(strategy='warn', random_state=None, constant=None)
-        >>> example.fit(X=<#TODO Example Value>, y=<#TODO Example Value>, sample_weight=None)
-        <#TODO Method Return Value>
-        >>> example.predict(X=<#TODO Example Value>)
-        <#TODO Method Return Value>
-        >>> example.predict_proba(X=<#TODO Example Value>)
-        <#TODO Method Return Value>
-        >>> example.predict_log_proba(X=<#TODO Example Value>)
-        <#TODO Method Return Value>
-        >>> example.score(X=<#TODO Example Value>, y=<#TODO Example Value>, sample_weight=None)
-        <#TODO Method Return Value>
-        """
+    Examples
+    --------
+    >>> from crawto-quality import crawto_doc
+    >>> example = DummyClassifier(strategy='warn', random_state=None, constant=None)
+    >>> example.fit(X=<#TODO Example Value>, y=<#TODO Example Value>, sample_weight=None)
+    <#TODO Method Return Value>
+    >>> example.predict(X=<#TODO Example Value>)
+    <#TODO Method Return Value>
+    >>> example.predict_proba(X=<#TODO Example Value>)
+    <#TODO Method Return Value>
+    >>> example.predict_log_proba(X=<#TODO Example Value>)
+    <#TODO Method Return Value>
+    >>> example.score(X=<#TODO Example Value>, y=<#TODO Example Value>, sample_weight=None)
+    <#TODO Method Return Value>
+    """
+```
