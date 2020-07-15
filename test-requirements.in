@@ -1,0 +1,5 @@
+pytest
+pydocstyle
+pytest-mypy
+pytest-black
+nuitka
